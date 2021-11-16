@@ -1,6 +1,7 @@
-// import inquirer
-
+// Include packages needed for this application
 const inquirer = require("inquirer");
+
+const fs = require("fs");
 
 //declare a list of questions
 const questions = [
