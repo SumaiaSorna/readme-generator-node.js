@@ -3,7 +3,7 @@
 const inquirer = require("inquirer");
 
 //declare a list of questions
-const question = [
+const questions = [
   //Define the questions
   //project Name
   {
@@ -19,7 +19,7 @@ const question = [
   },
   // Installation Instructions
   {
-    type: "input",
+    type: "confirm",
     message: "Does your project require any installation?",
     name: "installation",
   },
@@ -31,8 +31,8 @@ const question = [
   },
   // Test Instruction
   {
-    type: "input",
-    message: "How do you test this project?",
+    type: "confirm",
+    message: "Do you want to test for this project?",
     name: "test",
   },
   // Contribution Guidelines
@@ -46,6 +46,7 @@ const question = [
     type: "list",
     message: "Choose a license for your project",
     name: "license",
+    choices: ["MIT", "Apache", "Mozilla-Public", "Eclipse-Public"],
   },
   // Github Username
   {
@@ -57,6 +58,12 @@ const question = [
   {
     type: "input",
     message: "What is your email address?",
+    name: "email",
+  },
+  // Questions
+  {
+    type: "input",
+    message: "Do you have any questions about this project?",
     name: "email",
   },
 ];
