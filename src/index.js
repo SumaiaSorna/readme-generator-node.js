@@ -53,7 +53,7 @@ const questions = [
   {
     type: "confirm",
     message: "Are there any tests for this project?",
-    name: "test",
+    name: "tests",
   },
   // test steps
   {

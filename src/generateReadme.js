@@ -1,5 +1,5 @@
 const generateTitle = (answers) => {
-  return `# ${answers.title} ![${answers.license}](https://img.shields.io/static/v1?label=${answers.title}&message=License&color=green)`;
+  return `# ${answers.title} ![${answers.license}](https://img.shields.io/static/v1?label=${answers.title}&message=License&color=critical)`;
 };
 
 const generateTableOfContents = (answers) => {
@@ -34,23 +34,31 @@ const generateInstallation = (answers) => {
 };
 
 const generateUsage = (answers) => {
-  return `## Usage
+  if (answers.usage) {
+    return `## Usage
     
     To use the application run the following script:
     
     \`\`\`
-    ${answers.usage}
+    ${answers.usageSteps}
     \`\`\``;
+  } else {
+    return ``;
+  }
 };
 
 const generateTests = (answers) => {
-  return `## Tests
+  if (answers.tests) {
+    return `## Tests
     
     To use the application run the following script:
     
     \`\`\`
-    ${answers.tests}
+    ${answers.testSteps}
     \`\`\``;
+  } else {
+    return ``;
+  }
 };
 
 const generateContributing = (answers) => {
