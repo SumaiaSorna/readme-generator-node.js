@@ -2,6 +2,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
+const generateReadme = require("./generateReadme.js");
+
 //declare a list of questions
 const questions = [
   //Define the questions
@@ -9,7 +11,7 @@ const questions = [
   {
     type: "input",
     message: "What is the title of your project?",
-    name: "projectTitle",
+    name: "title",
   },
   // Description of the project
   {
@@ -64,102 +66,26 @@ const questions = [
   {
     type: "input",
     message: "Do you have any questions about this project?",
-    name: "email",
+    name: "questions",
   },
 ];
 
-const generateProjectTitle = (answers) => {
-  return `# Title ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)`;
+const writeToFile = (filePath, data) => {
+  try {
+    fs.writeFileSync(filePath, data);
+  } catch (error) {
+    console.log(error.message);
+  }
 };
-
-const generateTableOfContent = (answers) => {
-  return `
-  ## Table of Contents
-  
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Tests](#tests)
-  - [Contributing](#contributing)
-  - [License](#license)`;
-};
-
-const generateDescription = (answers) => {
-  return `## Description
-
-  ADD TEXT HERE`;
-};
-
-const generateInstallation = (answers) => {};
-
-const generateUsage = (answers) => {};
-
-const generateTest = (answers) => {};
-
-const generateContribution = (answers) => {
-  return `## Contributing
-
-  ADD TEXT HERE
-  `;
-};
-
-const generateLicense = (answers) => {
-  return `## License
-
-  ADD TEXT HERE
-  `;
-};
-
-// generate readme based on answers
-const generateReadme = (answers) => {
-  return `${generateProjectTitle(answers)}
-
-  ${generateTableOfContent(answers)}
-
-  ${generateDescription(answers)}
-
-  ## Installation
-
-Run the following script to install the packages required for the application:
-
-\`\`\`
-ADD TEXT HERE
-\`\`\`
-
-## Usage
-
-To use the application run the following script:
-
-\`\`\`
-ADD TEXT HERE
-\`\`\`
-
-## Tests
-
-To use the application run the following script:
-
-\`\`\`
-ADD TEXT HERE
-\`\`\`
-
-  ${generateContribution(answers)}
-
-  ${generateLicense(answers)}
-
-  `;
-};
-
-// // write readme
-// const writeToFile = (answer) => `
-// `;
 
 const start = async () => {
-  // prompt the questions using inquirer
+  // prompt the questions using inquirer and get the answers
+  const answers = await inquirer.prompt(questions);
+  const readme = generateReadme(answers);
 
-  const readmeAnswers = await inquirer.prompt(questions);
-  console.log(readmeAnswers);
+  console.log(answers);
   // write generated readme to a file
-  writeToFile("GENERATED_README.md", readmeAnswers);
+  writeToFile("GENERATED_README.md", readme);
 };
 
 // call the function to run the application
