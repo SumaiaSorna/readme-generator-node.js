@@ -1,17 +1,16 @@
-const generateProjectTitle = (answers) => {
-  return `# ${answers.title} ![MIT](https://img.shields.io/static/v1?label=${answers.ProjectTitle}message=License&color=green)`;
+const generateTitle = (answers) => {
+  return `# ${answers.title} ![${answers.license}](https://img.shields.io/static/v1?label=${answers.title}&message=License&color=green)`;
 };
 
 const generateTableOfContents = (answers) => {
   return `
-    ## Table of Contents
-    
-    - [Description](#description)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Tests](#tests)
-    - [Contributing](#contributing)
-    - [License](#license)`;
+## Table of Contents
+ - [Description](#description)
+ - [Installation](#installation)
+ - [Usage](#usage)
+ - [Tests](#tests)
+ - [Contributing](#contributing)
+ - [License](#license)`;
 };
 
 const generateDescription = (answers) => {
@@ -21,13 +20,17 @@ const generateDescription = (answers) => {
 };
 
 const generateInstallation = (answers) => {
-  return `## Installation
+  if (answers.installation) {
+    return `## Installation
     
     Run the following script to install the packages required for the application:
     
     \`\`\`
-    ${answers.installation}
+    ${answers.installationInformation}
     \`\`\``;
+  } else {
+    return ``;
+  }
 };
 
 const generateUsage = (answers) => {
@@ -53,7 +56,7 @@ const generateTests = (answers) => {
 const generateContributing = (answers) => {
   return `## Contributing
   
-    $(answers.contribution)
+    ${answers.contribution}
     `;
 };
 
@@ -66,7 +69,7 @@ const generateLicense = (answers) => {
 
 // generate readme based on answers
 const generateReadme = (answers) => {
-  return `${generateProjectTitle(answers)}
+  return `${generateTitle(answers)}
   
     ${generateTableOfContents(answers)}
     

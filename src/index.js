@@ -25,17 +25,44 @@ const questions = [
     message: "Does your project require any installation?",
     name: "installation",
   },
+  //installation steps
+  {
+    type: "input",
+    message: "Please add the necessary installation information.",
+    name: "installationInformation",
+    when: (answers) => {
+      return answers.installation;
+    },
+  },
   // Usage Information
   {
     type: "input",
     message: "How do you use this project?",
     name: "usage",
   },
+  // Usages steps
+  {
+    type: "input",
+    message: "Please input the usages steps:",
+    name: "usageSteps",
+    when: (answers) => {
+      return answers.usage;
+    },
+  },
   // Test Instruction
   {
     type: "confirm",
-    message: "Do you want to test for this project?",
+    message: "Are there any tests for this project?",
     name: "test",
+  },
+  // test steps
+  {
+    type: "input",
+    message: "Please provide the test steps:",
+    name: "testSteps",
+    when: (answers) => {
+      return answers.test;
+    },
   },
   // Contribution Guidelines
   {
@@ -70,6 +97,7 @@ const questions = [
   },
 ];
 
+// Create a function to write README file
 const writeToFile = (filePath, data) => {
   try {
     fs.writeFileSync(filePath, data);
@@ -78,6 +106,7 @@ const writeToFile = (filePath, data) => {
   }
 };
 
+// Create a function to start the application
 const start = async () => {
   // prompt the questions using inquirer and get the answers
   const answers = await inquirer.prompt(questions);
