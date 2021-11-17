@@ -1,16 +1,17 @@
 const generateTitle = (answers) => {
-  return `# ${answers.title} ![${answers.license}](https://img.shields.io/static/v1?label=${answers.title}&message=License&color=critical)`;
+  return `# ${answers.title} ![${answers.license}](https://img.shields.io/static/v1?label=${answers.license}&message=License&color=critical)`;
 };
 
 const generateTableOfContents = (answers) => {
   return `
 ## Table of Contents
  - [Description](#description)
- - [Installation](#installation)
- - [Usage](#usage)
- - [Tests](#tests)
+ ${answers.installation ? "- [Installation](#installation)" : ""}
+ ${answers.usage ? "- [Usage](#usage)" : ""}
+ ${answers.tests ? "- [Tests](#tests)" : ""}
  - [Contributing](#contributing)
- - [License](#license)`;
+ - [License](#license)
+ - [Question](#question)`;
 };
 
 const generateDescription = (answers) => {
@@ -75,6 +76,14 @@ const generateLicense = (answers) => {
     `;
 };
 
+const generateQuestion = (answers) => {
+  return `## Question
+  Email - ${answers.email}
+
+  GitHub - https://github.com/${answers.github}
+    `;
+};
+
 // generate readme based on answers
 const generateReadme = (answers) => {
   return `${generateTitle(answers)}
@@ -92,6 +101,8 @@ const generateReadme = (answers) => {
     ${generateContributing(answers)}
     
     ${generateLicense(answers)}
+
+    ${generateQuestion(answers)}
     `;
 };
 

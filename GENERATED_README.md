@@ -1,49 +1,45 @@
-# ss ![MIT](https://img.shields.io/static/v1?label=ss&message=License&color=critical)
-  
-    
+# Title ![Mozilla-Public](https://img.shields.io/static/v1?label=Mozilla-Public&message=License&color=critical)
+
 ## Table of Contents
- - [Description](#description)
- - [Installation](#installation)
- - [Usage](#usage)
- - [Tests](#tests)
- - [Contributing](#contributing)
- - [License](#license)
-    
-    ## Description
-  
-    ss
-    
-    ## Installation
-    
-    Run the following script to install the packages required for the application:
-    
-    ```
-    ss
-    ```
-    
-    ## Usage
-    
-    To use the application run the following script:
-    
-    ```
-    s
-    ```
-    
-    ## Tests
-    
-    To use the application run the following script:
-    
-    ```
-    undefined
-    ```
-    
-    ## Contributing
-  
-    ss
-    
-    
-    ## License
-  
-    MIT
-    
-    
+
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+
+- [Contributing](#contributing)
+- [License](#license)
+- [Question](#question)
+
+  ## Description
+
+  Des
+
+  ## Installation
+
+  Run the following script to install the packages required for the application:
+
+  ```
+  npm i
+  ```
+
+  ## Usage
+
+  To use the application run the following script:
+
+  ```
+  npm run start
+  ```
+
+  ## Contributing
+
+  cont
+
+  ## License
+
+  Mozilla-Public
+
+  ## Question
+
+      Email - bar
+
+      GitHub - foo

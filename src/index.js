@@ -36,8 +36,8 @@ const questions = [
   },
   // Usage Information
   {
-    type: "input",
-    message: "How do you use this project?",
+    type: "confirm",
+    message: "Do you have usages?",
     name: "usage",
   },
   // Usages steps
@@ -89,12 +89,6 @@ const questions = [
     message: "What is your email address?",
     name: "email",
   },
-  // Questions
-  {
-    type: "input",
-    message: "Do you have any questions about this project?",
-    name: "questions",
-  },
 ];
 
 // Create a function to write README file
@@ -110,9 +104,9 @@ const writeToFile = (filePath, data) => {
 const start = async () => {
   // prompt the questions using inquirer and get the answers
   const answers = await inquirer.prompt(questions);
+  console.log(answers);
   const readme = generateReadme(answers);
 
-  console.log(answers);
   // write generated readme to a file
   writeToFile("GENERATED_README.md", readme);
 };
