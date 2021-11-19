@@ -1,2 +1,33 @@
-# readme-generator-node.js
-This is a command line application that dynamically generates a professional README.md file.
+# Readme Generator
+
+## Table Of Contents
+
+- [Description](#description)
+- [Installation](#installation)
+- [Link to Repository](#link-to-repository)
+- [Link to Demo Vedio](#link-to-demo-vedio)
+- [Screenshots](#screenshots)
+
+## Description
+
+Readme-generator is an app which I have created using Node.js with the inquirer package.This app accepts user input and returns a README.md file, with sections and table of contents dynamically build based on which elements the user choose to include.
+
+## Installation
+
+```
+git clone git@github.com:SumaiaSorna/readme-generator-node.js.git
+cd readme-generator-node.js
+code .
+
+npm i
+```
+
+## Link to repository
+
+Click [here](https://sumaiasorna.github.io/portfolio-html-css/) to view deployed application on Github page.
+
+## Link to Demo Vedio
+
+<a href="#">Walkthrough Video</a>
+
+## Screenshots /GIF
