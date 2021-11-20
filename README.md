@@ -18,7 +18,6 @@ Readme-generator is an app which I have created using Node.js with the inquirer 
 git clone git@github.com:SumaiaSorna/readme-generator-node.js.git
 cd readme-generator-node.js
 code .
-
 npm i
 ```
 
@@ -31,3 +30,7 @@ Click [here](https://sumaiasorna.github.io/portfolio-html-css/) to view deployed
 <a href="#">Walkthrough Video</a>
 
 ## Screenshots /GIF
+
+## Questions
+
+If you have any questions about this application, please feel free to contact me in my <a href="mailto:sorna.sumaia@gmail.com">email.</a>
