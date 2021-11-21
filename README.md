@@ -4,7 +4,7 @@
 
 - [Description](#description)
 - [Installation](#installation)
-- [Link to Repository](#link-to-repository)
+- [Deployed URL](#deployed-url)
 - [Link to Demo Vedio](#link-to-demo-vedio)
 - [Screenshots](#screenshots)
 
@@ -21,9 +21,9 @@ code .
 npm i
 ```
 
-## Link to repository
+## Deployed URL
 
-Click [here](https://sumaiasorna.github.io/portfolio-html-css/) to view deployed application on Github page.
+Click [here](https://sumaiasorna.github.io/readme-generator-node.js/) to view deployed application on Github page.
 
 ## Link to Demo Vedio
 
