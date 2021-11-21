@@ -29,7 +29,11 @@ Click [here](https://sumaiasorna.github.io/portfolio-html-css/) to view deployed
 
 <a href="#">Walkthrough Video</a>
 
-## Screenshots /GIF
+## Screenshots
+
+![screenshots of readme-generator](./assets/images/readme-generator1.png)
+
+![screenshots of readme-generator](./assets/images/readme-generator2.png)
 
 ## Questions
 
