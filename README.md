@@ -1,5 +1,7 @@
 # Readme Generator
 
+![readme-generator-gif](./assets/gif/readme-generator-GIF.gif)
+
 ## Table Of Contents
 
 - [Description](#description)
@@ -27,7 +29,7 @@ Click [here](https://sumaiasorna.github.io/readme-generator-node.js/) to view de
 
 ## Link to Demo Vedio
 
-<a href="#">Walkthrough Video</a>
+<a href="https://drive.google.com/drive/u/0/folders/1Btrfw7xS7A-m06o9i2nxBnDqUijh5KD3">Walkthrough Video</a>
 
 ## Screenshots
 
