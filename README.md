@@ -1,4 +1,4 @@
-# Readme Generator
+# Readme Generator ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=critical)
 
 ![readme-generator-gif](./assets/gif/readme-generator-GIF.gif)
 
