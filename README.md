@@ -2,6 +2,14 @@
 
 ![readme-generator-gif](./assets/gif/readme-generator-GIF.gif)
 
+## Deployed URL
+
+Click [here](https://sumaiasorna.github.io/readme-generator-node.js/) to view deployed application on Github page.
+
+## Link to Demo Vedio
+
+<a href="https://drive.google.com/drive/u/0/folders/1Btrfw7xS7A-m06o9i2nxBnDqUijh5KD3">Walkthrough Video</a>
+
 ## Table Of Contents
 
 - [Description](#description)
@@ -22,14 +30,6 @@ cd readme-generator-node.js
 code .
 npm i
 ```
-
-## Deployed URL
-
-Click [here](https://sumaiasorna.github.io/readme-generator-node.js/) to view deployed application on Github page.
-
-## Link to Demo Vedio
-
-<a href="https://drive.google.com/drive/u/0/folders/1Btrfw7xS7A-m06o9i2nxBnDqUijh5KD3">Walkthrough Video</a>
 
 ## Screenshots
 
