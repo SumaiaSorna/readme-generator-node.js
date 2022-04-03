@@ -105,7 +105,6 @@ const writeToFile = (filePath, data) => {
 const start = async () => {
   // prompt the questions using inquirer and get the answers
   const answers = await inquirer.prompt(questions);
-  console.log(answers);
   const readme = generateReadme(answers);
 
   // write generated readme to a file

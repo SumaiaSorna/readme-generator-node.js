@@ -27,6 +27,7 @@ const generateTableOfContents = (answers) => {
 ${contents.join("\n")}
 `;
 };
+
 const generateDescription = (answers) => {
   return `## Description
   ${answers.description}`;
